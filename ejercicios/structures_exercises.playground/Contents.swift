@@ -120,6 +120,9 @@ struct Person {
     
 }
 
+let person1 = Person(name: "Alfonso", age: 24)
+let person2 = Person(name: "Orlando", age: 30)
+
 /*
 // MARK: Ejercicio 6
 Crea una estructura Producto con nombre (String) y precio (Double).
@@ -179,50 +182,60 @@ struct Point {
 Crea una estructura Materia con nombre (String) y calificaciones ([Int]).
 Agrega una función que devuelva una tupla (nombre: String, promedio: Double) indicando la materia y su promedio.
 ⸻
-*/
+
+ 
+ 
+ */
 
 struct Subject {
-    var name: String
-    var grades: [Int]
+    var name: String = ""
+    var grades: [Int] = []
     
-    func gradesSubject() -> (String, Double) {
-        return ("Apple", 23)
+    func gradesSubject(_ name: String, _ grades: [Int]) {
+        var total = 0
+        for point in grades {
+            total += point
+        }
+        let grade: Double = Double(total/grades.count)
+        print((name, grade))
     }
 }
 
-/*
-// MARK: Ejercicio 10
-Crea una estructura Tienda con un array de productos ([Producto]).
-Agrega funciones para:
-1. Agregar un producto.
-2. Eliminar un producto por nombre.
-3. Devolver el precio total de todos los productos.
+var subject = Subject()
+subject.gradesSubject("Spanish", [6,7,8,7,9,10])
 
-*/
 
+// MARK: Exercise 10
+ 
 struct Product {
     var name: String
     var price: Double
 }
 
 struct Store {
-    var products: [Product]
+    var products: [Product] = []
     
     mutating func addProduct(_ product: Product) {
         products.append(product)
+        print(products)
     }
     
     mutating func removeProduct(_ name: String) {
         products.removeAll { $0.name == name }
+        print(products)
     }
     
-    func totalPrice() -> Double {
-        return products.reduce(0) { $0 + $1.price }
+    func totalPrice() {
+        let totalPrice = products.reduce(0) { $0 + $1.price }
+        print(totalPrice)
     }
 }
 
-var store = Store(products: [])
+var store = Store()
 store.addProduct(Product(name: "iPhone", price: 25000))
+store.addProduct(Product(name: "iPad", price: 30000))
+store.addProduct(Product(name: "MacBook", price: 45000))
+
 store.removeProduct("iPhone")
 store.totalPrice()
 
