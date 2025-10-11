@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ejercicio4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrowshape.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9ln-iW-0iE">
+                                <rect key="frame" x="320" y="412.66666666666669" width="85" height="52"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="kTd-F7-54C"/>
+                                    <constraint firstAttribute="height" constant="55" id="mEC-kv-nmt"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h67-rl-1Db">
+                                <rect key="frame" x="81.333333333333314" y="94" width="230.33333333333337" height="57.333333333333343"/>
+                                <string key="text">Estas la página uno de
+la pantalla </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="qUA-an-dIn">
+                                <rect key="frame" x="160" y="792" width="73" height="26"/>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9ln-iW-0iE" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="B2N-VP-Pnk"/>
+                            <constraint firstItem="qUA-an-dIn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="HkV-wC-xHQ"/>
+                            <constraint firstItem="qUA-an-dIn" firstAttribute="centerX" secondItem="h67-rl-1Db" secondAttribute="centerX" id="Xga-1l-8KP"/>
+                            <constraint firstItem="h67-rl-1Db" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="sN7-UB-1yC"/>
+                            <constraint firstItem="h67-rl-1Db" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sqY-sE-Bsi"/>
+                            <constraint firstItem="9ln-iW-0iE" firstAttribute="right" secondItem="6Tk-OE-BBY" secondAttribute="right" constant="12" id="tKW-Cb-5V5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75.572519083969468" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowshape.right" catalog="system" width="128" height="104"/>
+    </resources>
+</document>
