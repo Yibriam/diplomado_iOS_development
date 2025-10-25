@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calculadoraIMC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1U-qL-PaW">
+                                <rect key="frame" x="95" y="352.5" width="130" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Calculate IMC"/>
+                                <connections>
+                                    <action selector="calculateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ym-h3-Hie"/>
+                                    <segue destination="P38-Vp-6Fz" kind="show" identifier="showResultSegue" id="vEu-l0-po1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMC Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6m-5H-OnQ">
+                                <rect key="frame" x="104" y="50" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cUi-iW-v7g">
+                                <rect key="frame" x="124" y="237.5" width="74" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Height" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EG9-4i-e3h">
+                                <rect key="frame" x="124.5" y="291.5" width="71" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="k6m-5H-OnQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="P9S-1n-Riw"/>
+                            <constraint firstItem="EG9-4i-e3h" firstAttribute="top" secondItem="cUi-iW-v7g" secondAttribute="bottom" constant="20" id="WQW-oW-b0Z"/>
+                            <constraint firstItem="k6m-5H-OnQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YdP-Wm-cga"/>
+                            <constraint firstItem="A1U-qL-PaW" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="76" id="dNT-pi-mFO"/>
+                            <constraint firstItem="cUi-iW-v7g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="1" id="eAv-jQ-1pj"/>
+                            <constraint firstItem="A1U-qL-PaW" firstAttribute="top" secondItem="EG9-4i-e3h" secondAttribute="bottom" constant="27" id="i18-id-Ml5"/>
+                            <constraint firstItem="EG9-4i-e3h" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ihK-a9-QYx"/>
+                            <constraint firstItem="A1U-qL-PaW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tfQ-cZ-LOr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calculateIMC" destination="A1U-qL-PaW" id="Y6w-69-GcL"/>
+                        <outlet property="heightField" destination="EG9-4i-e3h" id="vAM-On-Z2W"/>
+                        <outlet property="weightField" destination="cUi-iW-v7g" id="HPL-ft-56A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76" y="4"/>
+        </scene>
+        <!--View Controller Result-->
+        <scene sceneID="Gqw-97-J7S">
+            <objects>
+                <viewController id="P38-Vp-6Fz" customClass="ViewControllerResult" customModule="calculadoraIMC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IE9-Hh-G8F">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Us4-wq-1GK">
+                                <rect key="frame" x="139" y="251.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mcD-mk-C04"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Us4-wq-1GK" firstAttribute="centerY" secondItem="mcD-mk-C04" secondAttribute="centerY" constant="-12" id="6gj-ks-Bsm"/>
+                            <constraint firstItem="Us4-wq-1GK" firstAttribute="centerX" secondItem="mcD-mk-C04" secondAttribute="centerX" id="fYa-r5-lVJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WF9-4m-mlf"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="Us4-wq-1GK" id="WP8-Ow-bKh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IUW-sS-NZc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="917" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
