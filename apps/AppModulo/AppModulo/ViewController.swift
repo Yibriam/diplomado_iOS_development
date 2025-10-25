@@ -27,9 +27,11 @@ final class LoginViewController: UIViewController {
     }
     
     private func logIn() {
-        let navigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BaseNavigationController")
+        let homeViewController = HomeViewController(nibName: "HomeView", bundle: nil)
+        let navigationController = UINavigationController(rootViewController: homeViewController)
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.modalTransitionStyle = .flipHorizontal
+        navigationController.navigationBar.prefersLargeTitles = true
         present(navigationController, animated: true)
     }
 

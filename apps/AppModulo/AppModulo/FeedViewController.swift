@@ -9,12 +9,10 @@ import UIKit
 
 class FeedViewController: UIViewController {
     
-    @IBOutlet weak var firstImageView: UIImageView!
-    @IBOutlet weak var secondImageView: UIImageView!
-    @IBOutlet weak var thirdImageView: UIImageView!
-    @IBOutlet weak var firstCaption: UILabel!
-    @IBOutlet weak var secondCaption: UILabel!
-    @IBOutlet weak var thirdCaption: UILabel!
+    @IBOutlet weak var firstCaptionedImageView: CaptionedImageView!
+    @IBOutlet weak var secondCaptionedImageView: CaptionedImageView!
+    @IBOutlet weak var thirdCaptionedImageView: CaptionedImageView!
+
     
     var pictureType: PictureType = .dog
     var showCaption: Bool = true
@@ -28,20 +26,16 @@ class FeedViewController: UIViewController {
     }
     
     private func showOrHideCaptions() {
-        firstCaption.isHidden = !showCaption
-        secondCaption.isHidden = !showCaption
-        thirdCaption.isHidden = !showCaption
+        firstCaptionedImageView.isHidden = showCaption
+        firstCaptionedImageView.isHidden = showCaption
+        firstCaptionedImageView.isHidden = showCaption
     }
     
     private func setImageAndCaptions() {
         let captionedImages = pictureType.captionedImages
-        firstCaption.text = captionedImages[0].caption
-        secondCaption.text = captionedImages[1].caption
-        thirdCaption.text = captionedImages[2].caption
-        
-        firstImageView.image = captionedImages[0].image
-        secondImageView.image = captionedImages[1].image
-        thirdImageView.image = captionedImages[2].image
+        firstCaptionedImageView.captionedImage = captionedImages[0]
+        secondCaptionedImageView.captionedImage = captionedImages[1]
+        thirdCaptionedImageView.captionedImage = captionedImages[2]
     }
     
     
