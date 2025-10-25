@@ -7,7 +7,7 @@
 
 import UIKit
 
-class informationViewController: UIViewController {
+class InformationViewController: UIViewController {
     
     @IBOutlet weak var informationTextView: UITextView!
     

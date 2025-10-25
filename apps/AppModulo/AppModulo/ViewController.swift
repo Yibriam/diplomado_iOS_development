@@ -27,7 +27,10 @@ final class LoginViewController: UIViewController {
     }
     
     private func logIn() {
-        performSegue(withIdentifier: "LoginHomeSegue", sender: nil)
+        let navigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BaseNavigationController")
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.modalTransitionStyle = .flipHorizontal
+        present(navigationController, animated: true)
     }
 
 }
