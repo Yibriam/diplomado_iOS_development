@@ -46,4 +46,14 @@ final class CaptionedImageView: UIView {
         bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         
     }
+    
+    private func setUpViewWithNibinitializer() {
+        guard let contentView = UINib(nibName: "CaptionedImageView", bundle: nil).instantiate(withOwner: self).first as? UIView else { return }
+        addSubview(contentView)
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        contentView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+    }
 }
