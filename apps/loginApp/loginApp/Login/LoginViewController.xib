@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="loginApp" customModuleProvider="target">
+            <connections>
+                <outlet property="login2Button" destination="jWs-fx-vFm" id="Px6-S7-Dix"/>
+                <outlet property="password2Field" destination="8Rr-KZ-3mC" id="8Qj-zt-Ytf"/>
+                <outlet property="user2Field" destination="VaK-p1-5MG" id="RFu-ed-VIS"/>
+                <outlet property="view" destination="tu9-7T-Hf6" id="Gdb-cJ-SLe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="tu9-7T-Hf6">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWs-fx-vFm">
+                    <rect key="frame" x="153" y="753.66666666666663" width="87.333333333333314" height="34.333333333333371"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Acceder"/>
+                    <connections>
+                        <action selector="loginButtonTapped:" destination="-1" eventType="touchUpInside" id="99T-Rp-l7u"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingresa tus datos para acceder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3Z-y8-Q9T">
+                    <rect key="frame" x="56" y="185" width="281.33333333333331" height="25.333333333333343"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3Uz-Ba-TQg">
+                    <rect key="frame" x="145.33333333333334" y="409.33333333333331" width="102.33333333333334" height="108.66666666666669"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cga-D3-mOU">
+                            <rect key="frame" x="0.0" y="0.0" width="102.33333333333333" height="20.333333333333332"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VaK-p1-5MG">
+                            <rect key="frame" x="0.0" y="20.333333333333371" width="102.33333333333333" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLF-Ik-bzp">
+                            <rect key="frame" x="0.0" y="54.333333333333378" width="102.33333333333333" height="20.333333333333336"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Rr-KZ-3mC">
+                            <rect key="frame" x="0.0" y="74.666666666666686" width="102.33333333333333" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Candado" translatesAutoresizingMaskIntoConstraints="NO" id="rZ7-ky-PU2">
+                    <rect key="frame" x="146.66666666666666" y="75" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Fkg-RO-4H0"/>
+                        <constraint firstAttribute="height" constant="100" id="S6i-jd-JVi"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="L28-lQ-kYi"/>
+            <color key="backgroundColor" systemColor="systemGrayColor"/>
+            <constraints>
+                <constraint firstItem="jWs-fx-vFm" firstAttribute="bottom" secondItem="L28-lQ-kYi" secondAttribute="bottom" constant="-30" id="4b1-hH-OJq"/>
+                <constraint firstItem="3Uz-Ba-TQg" firstAttribute="centerX" secondItem="L28-lQ-kYi" secondAttribute="centerX" id="6BX-qS-gAH"/>
+                <constraint firstItem="o3Z-y8-Q9T" firstAttribute="top" secondItem="rZ7-ky-PU2" secondAttribute="bottom" constant="10" id="BYP-bc-yiG"/>
+                <constraint firstItem="rZ7-ky-PU2" firstAttribute="centerX" secondItem="L28-lQ-kYi" secondAttribute="centerX" id="KMq-gT-NSG"/>
+                <constraint firstItem="jWs-fx-vFm" firstAttribute="centerX" secondItem="L28-lQ-kYi" secondAttribute="centerX" id="Nrb-Rf-SK9"/>
+                <constraint firstItem="o3Z-y8-Q9T" firstAttribute="centerX" secondItem="L28-lQ-kYi" secondAttribute="centerX" id="bCi-32-AlS"/>
+                <constraint firstItem="rZ7-ky-PU2" firstAttribute="top" secondItem="L28-lQ-kYi" secondAttribute="top" constant="16" id="izh-bc-2Od"/>
+                <constraint firstItem="3Uz-Ba-TQg" firstAttribute="centerY" secondItem="L28-lQ-kYi" secondAttribute="centerY" constant="25" id="xbR-cK-dkA"/>
+            </constraints>
+            <point key="canvasLocation" x="-141" y="-35"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Candado" width="512" height="512"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShopViewController" customModule="shoppingApp" customModuleProvider="target">
+            <connections>
+                <outlet property="bread" destination="2uB-al-99k" id="hsk-p3-chV"/>
+                <outlet property="carrot" destination="ylb-wT-bdJ" id="Ydc-x8-pAi"/>
+                <outlet property="cereal" destination="Jl0-aj-S4A" id="Xcc-mp-uge"/>
+                <outlet property="cheese" destination="ZFA-KU-L8O" id="loU-Ur-fa5"/>
+                <outlet property="eggs" destination="WzQ-fp-iBU" id="YHO-qz-ch7"/>
+                <outlet property="goShoppingButton" destination="9kb-2B-mbY" id="IJG-mw-Hwm"/>
+                <outlet property="lettuce" destination="ndn-yH-zSS" id="x4R-81-paJ"/>
+                <outlet property="milk" destination="6Zn-sC-hNf" id="3gE-e6-Z50"/>
+                <outlet property="paper" destination="mmF-tn-XHB" id="kMO-zx-z8c"/>
+                <outlet property="potato" destination="bs0-jh-wtv" id="lGV-TT-RNP"/>
+                <outlet property="tomato" destination="0gu-zT-ich" id="Cbe-FB-lkW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylb-wT-bdJ">
+                    <rect key="frame" x="15" y="80" width="120" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="5fm-wP-vbm"/>
+                        <constraint firstAttribute="width" constant="120" id="hx8-bm-IRV"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="icons8-zanahoria-64" title="Carrot"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uB-al-99k">
+                    <rect key="frame" x="15" y="150" width="120" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="U6S-CH-2yE"/>
+                        <constraint firstAttribute="width" constant="120" id="wJL-LI-0y5"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="icons8-pan-64" title="Bread"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmF-tn-XHB">
+                    <rect key="frame" x="15" y="220" width="120" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="5Ur-ua-yxD"/>
+                        <constraint firstAttribute="height" constant="60" id="jLU-Uj-H2u"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="icons8-papel-64" title="Paper"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gu-zT-ich">
+                    <rect key="frame" x="15" y="290" width="120" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="9JP-Mh-Zqf"/>
+                        <constraint firstAttribute="width" constant="120" id="n1q-w6-21D"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="icons8-tomate-64" title="Tomato"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jl0-aj-S4A">
+                    <rect key="frame" x="15" y="360" width="120" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="xM6-Xy-K7B"/>
+                        <constraint firstAttribute="height" constant="60" id="xcS-tC-fEL"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="icons8-trigo-64" title="Cereal"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WzQ-fp-iBU">
+                    <rect key="frame" x="185" y="80" width="120" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Rwa-om-jtr"/>
+                        <constraint firstAttribute="width" constant="120" id="ay7-TT-QYK"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="icons8-huevos-64" title="Eggs"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Zn-sC-hNf">
+                    <rect key="frame" x="185" y="150" width="120" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="2h4-GO-Yy2"/>
+                        <constraint firstAttribute="height" constant="60" id="PK5-Rm-bkL"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="icons8-leche-64" title="Milk"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFA-KU-L8O" userLabel="Cheese">
+                    <rect key="frame" x="185" y="220" width="120" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="exx-Mi-fgW"/>
+                        <constraint firstAttribute="height" constant="60" id="puH-s3-jjY"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="icons8-queso-64" title="Cheese"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndn-yH-zSS">
+                    <rect key="frame" x="185" y="290" width="120" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="G4V-pK-Bjt"/>
+                        <constraint firstAttribute="width" constant="120" id="NIV-0I-Ek1"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="icons8-lechuga-64" title="Lettuce"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shopping List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DJ-34-Tr6">
+                    <rect key="frame" x="65" y="25" width="190" height="38.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kb-2B-mbY">
+                    <rect key="frame" x="78" y="513.5" width="164" height="34.5"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Let’s Go Shopping"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bs0-jh-wtv">
+                    <rect key="frame" x="185" y="360" width="120" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="cfx-j6-824"/>
+                        <constraint firstAttribute="width" constant="120" id="wb7-LD-ZgW"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="icons8-patata-64" title="Potato"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6Zn-sC-hNf" secondAttribute="trailing" constant="15" id="2UI-vw-Qhg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9kb-2B-mbY" secondAttribute="bottom" constant="20" id="5Bo-cK-TwS"/>
+                <constraint firstItem="Jl0-aj-S4A" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="8ds-cT-7fp"/>
+                <constraint firstItem="mmF-tn-XHB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="9pf-qe-cv9"/>
+                <constraint firstItem="0gu-zT-ich" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="BBm-nA-M51"/>
+                <constraint firstItem="Jl0-aj-S4A" firstAttribute="top" secondItem="0gu-zT-ich" secondAttribute="bottom" constant="10" id="EJY-rf-hSI"/>
+                <constraint firstItem="1DJ-34-Tr6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="JVH-Zm-EG7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bs0-jh-wtv" secondAttribute="trailing" constant="15" id="JVy-lQ-STA"/>
+                <constraint firstItem="ylb-wT-bdJ" firstAttribute="top" secondItem="1DJ-34-Tr6" secondAttribute="bottom" constant="16.5" id="JYB-ck-Vns"/>
+                <constraint firstItem="6Zn-sC-hNf" firstAttribute="top" secondItem="WzQ-fp-iBU" secondAttribute="bottom" constant="10" id="Jxs-Zz-dPn"/>
+                <constraint firstItem="2uB-al-99k" firstAttribute="top" secondItem="ylb-wT-bdJ" secondAttribute="bottom" constant="10" id="LPY-sO-3Pu"/>
+                <constraint firstItem="mmF-tn-XHB" firstAttribute="top" secondItem="2uB-al-99k" secondAttribute="bottom" constant="10" id="NAf-0T-drX"/>
+                <constraint firstItem="WzQ-fp-iBU" firstAttribute="top" secondItem="1DJ-34-Tr6" secondAttribute="bottom" constant="16.5" id="O1G-uO-yCH"/>
+                <constraint firstItem="ZFA-KU-L8O" firstAttribute="top" secondItem="6Zn-sC-hNf" secondAttribute="bottom" constant="10" id="SAe-T4-ad3"/>
+                <constraint firstItem="1DJ-34-Tr6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VS7-4f-KDg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ndn-yH-zSS" secondAttribute="trailing" constant="15" id="X98-FI-NvZ"/>
+                <constraint firstItem="Jl0-aj-S4A" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="XLl-qF-c8s"/>
+                <constraint firstItem="ylb-wT-bdJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="ZIU-E8-XqA"/>
+                <constraint firstItem="0gu-zT-ich" firstAttribute="top" secondItem="mmF-tn-XHB" secondAttribute="bottom" constant="10" id="ZaX-dg-oY6"/>
+                <constraint firstItem="9kb-2B-mbY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fy4-BM-hYy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZFA-KU-L8O" secondAttribute="trailing" constant="15" id="ovO-nn-Yo4"/>
+                <constraint firstItem="bs0-jh-wtv" firstAttribute="top" secondItem="ndn-yH-zSS" secondAttribute="bottom" constant="10" id="qCf-aQ-NRo"/>
+                <constraint firstItem="ndn-yH-zSS" firstAttribute="top" secondItem="ZFA-KU-L8O" secondAttribute="bottom" constant="10" id="r0g-zA-SsV"/>
+                <constraint firstItem="2uB-al-99k" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="vas-9s-xC6"/>
+                <constraint firstItem="Jl0-aj-S4A" firstAttribute="top" secondItem="0gu-zT-ich" secondAttribute="bottom" constant="10" id="zEe-Fp-Moh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WzQ-fp-iBU" secondAttribute="trailing" constant="15" id="zY8-Fi-a95"/>
+            </constraints>
+            <point key="canvasLocation" x="20.610687022900763" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icons8-huevos-64" width="64" height="64"/>
+        <image name="icons8-leche-64" width="64" height="64"/>
+        <image name="icons8-lechuga-64" width="64" height="64"/>
+        <image name="icons8-pan-64" width="64" height="64"/>
+        <image name="icons8-papel-64" width="64" height="64"/>
+        <image name="icons8-patata-64" width="64" height="64"/>
+        <image name="icons8-queso-64" width="64" height="64"/>
+        <image name="icons8-tomate-64" width="64" height="64"/>
+        <image name="icons8-trigo-64" width="64" height="64"/>
+        <image name="icons8-zanahoria-64" width="64" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
