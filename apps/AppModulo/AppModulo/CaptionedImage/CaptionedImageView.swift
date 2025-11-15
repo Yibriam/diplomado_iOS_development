@@ -8,52 +8,62 @@
 import UIKit
 
 final class CaptionedImageView: UIView {
-    
-    @IBOutlet private var image: UIImageView!
-    @IBOutlet private var caption: UILabel!
+
+    private lazy var image: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.setContentHuggingPriority(.defaultLow, for: .vertical)
+        imageView.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
+        imageView.clipsToBounds = true
+        return imageView
+    }()
+
+    private lazy var caption: UILabel = {
+        let label = UILabel()
+        label.setContentHuggingPriority(.required, for: .vertical)
+        label.setContentCompressionResistancePriority(.required, for: .vertical)
+        return label
+    }()
     
     var showCaption: Bool = false {
         didSet {
             caption.isHidden = !showCaption
         }
     }
-    
+
     var captionedImage: CaptionedImage? {
         didSet {
             caption.text = captionedImage?.caption
             image.image = captionedImage?.image
         }
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setUpViewWithBundle()
+        setStackViewContanier()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setUpViewWithBundle()
+        setStackViewContanier()
     }
     
-    
-    private func setUpViewWithBundle() {
-        guard let contentView = Bundle.main.loadNibNamed("CaptionedImageView", owner: self)?.first as? UIView else { return }
-        addSubview(contentView)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        contentView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+    private func setStackViewContanier() {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.alignment = .fill
+        stackView.distribution = .fill
+        addSubview(stackView)
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+        ])
+        stackView.addArrangedSubview(image)
+        stackView.addArrangedSubview(caption)
         
     }
     
-    private func setUpViewWithNibinitializer() {
-        guard let contentView = UINib(nibName: "CaptionedImageView", bundle: nil).instantiate(withOwner: self).first as? UIView else { return }
-        addSubview(contentView)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        contentView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-    }
 }

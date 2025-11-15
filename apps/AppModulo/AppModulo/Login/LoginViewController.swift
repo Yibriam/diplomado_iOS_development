@@ -9,20 +9,23 @@ import UIKit
 
 final class LoginViewController: UIViewController {
     
-    @IBOutlet weak var userField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
+    var customView: LoginView {
+        return view as! LoginView
+    }
     
+    override func loadView() {
+        view = LoginView()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
     }
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        print("user: ", userField.text)
-        print("password: ", passwordField.text)
+        print("user: ", customView.userTextField.text)
+        print("password: ", customView.passwordTextField.text)
         logIn()
     }
     

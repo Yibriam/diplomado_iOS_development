@@ -26,7 +26,7 @@
                 <constraint firstItem="iVy-Pb-xRh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="pZq-D1-Bpn"/>
                 <constraint firstAttribute="trailing" secondItem="iVy-Pb-xRh" secondAttribute="trailing" id="tU6-Jx-qXw"/>
             </constraints>
-            <point key="canvasLocation" x="129" y="20"/>
+            <point key="canvasLocation" x="127.48091603053435" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
