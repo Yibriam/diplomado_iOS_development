@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_3" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,30 +13,64 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ar9-iZ-4ch">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="179" width="402" height="470"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t3I-Q9-tmw">
+                                <rect key="frame" x="8" y="657" width="303" height="151"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PM-d3-Sub">
+                                <rect key="frame" x="319" y="657" width="75" height="175"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZMY-ey-icE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsY-JO-GiA">
+                                <rect key="frame" x="319" y="70" width="75" height="101"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="sortButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TaC-6O-WKX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ar9-iZ-4ch" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0Z7-E0-5T9"/>
+                            <constraint firstItem="ar9-iZ-4ch" firstAttribute="top" secondItem="CsY-JO-GiA" secondAttribute="bottom" constant="8" id="0Et-vz-Gyb"/>
+                            <constraint firstItem="ar9-iZ-4ch" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="117" id="0Z7-E0-5T9"/>
+                            <constraint firstItem="CsY-JO-GiA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="7ej-EZ-0wC"/>
+                            <constraint firstItem="9PM-d3-Sub" firstAttribute="leading" secondItem="t3I-Q9-tmw" secondAttribute="trailing" constant="8" id="T7H-LI-V48"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CsY-JO-GiA" secondAttribute="trailing" constant="8" id="XL3-4u-Zei"/>
+                            <constraint firstItem="t3I-Q9-tmw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="YZL-eb-fEz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ar9-iZ-4ch" secondAttribute="trailing" id="beG-dC-qIF"/>
+                            <constraint firstItem="t3I-Q9-tmw" firstAttribute="top" secondItem="ar9-iZ-4ch" secondAttribute="bottom" constant="8" id="bgi-3n-7nr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9PM-d3-Sub" secondAttribute="bottom" constant="8" id="eco-Gb-rpO"/>
                             <constraint firstItem="ar9-iZ-4ch" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fDg-Mw-QHF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ar9-iZ-4ch" secondAttribute="bottom" id="su4-FM-pOW"/>
+                            <constraint firstItem="9PM-d3-Sub" firstAttribute="top" secondItem="ar9-iZ-4ch" secondAttribute="bottom" constant="8" id="obO-vG-Tq0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9PM-d3-Sub" secondAttribute="trailing" constant="8" id="rX5-Vg-fWY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ar9-iZ-4ch" secondAttribute="bottom" constant="191" id="su4-FM-pOW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t3I-Q9-tmw" secondAttribute="bottom" constant="32" id="tFg-SY-k5o"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="button" destination="9PM-d3-Sub" id="B9b-Ig-OzB"/>
+                        <outlet property="button2" destination="CsY-JO-GiA" id="aL9-e3-V4e"/>
                         <outlet property="tableView" destination="ar9-iZ-4ch" id="mN6-kq-ec5"/>
+                        <outlet property="textField" destination="t3I-Q9-tmw" id="UiK-Sh-W9J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="4"/>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
