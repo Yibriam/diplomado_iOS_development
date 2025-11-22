@@ -16,37 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UbV-Y2-RXJ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pnQ-kZ-Xet">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UbV-Y2-RXJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="c8h-Mx-2N8"/>
-                            <constraint firstItem="UbV-Y2-RXJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="hgL-yl-mub"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="UbV-Y2-RXJ" secondAttribute="bottom" id="pDW-mh-8k4"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UbV-Y2-RXJ" secondAttribute="trailing" id="qEg-1w-tyP"/>
+                            <constraint firstItem="pnQ-kZ-Xet" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="AvK-qd-BOq"/>
+                            <constraint firstItem="pnQ-kZ-Xet" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="eXs-gS-lVR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pnQ-kZ-Xet" secondAttribute="trailing" id="rWT-bT-lKP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="pnQ-kZ-Xet" secondAttribute="bottom" id="x4Z-6n-tsn"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="historyTextView" destination="UbV-Y2-RXJ" id="Fno-vG-sXR"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48" y="-2"/>
+            <point key="canvasLocation" x="46.875" y="-2.112676056338028"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
