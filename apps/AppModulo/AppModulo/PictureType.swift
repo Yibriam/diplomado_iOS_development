@@ -1,30 +1,34 @@
 //
 //  PictureType.swift
-//  AppModulo
+//  FakestagramShare
 //
-//  Created by Yibriam on 18/10/25.
+//  Created by alberto on 18/10/25.
 //
 
-import Foundation
 import UIKit
 
 enum PictureType {
     case dog, cat
     
-    var captionedImages: [(image: UIImage, caption: String)] {
+    var captionedImages: [CaptionedImage] {
         switch self {
         case .dog:
             return [
-                (UIImage.dog1, "Peluzo"),
-                (UIImage(resource: .dog2), "Fido"),
-                (UIImage(named: "dog-3") ?? UIImage(), "Milaneso")
+                .init(image: UIImage.dog1, caption: "Peluzo"),
+                .init(image: UIImage(resource: .dog2), caption: "Fido"),
+                .init(image: UIImage(named: "dog-3") ?? UIImage(), caption: "Milaneso")
             ]
         case .cat:
             return [
-                (UIImage.cat1, "Milo"),
-                (UIImage.cat2, "Coffe"),
-                (UIImage.cat3, "Marcelo"),
+                .init(image: UIImage.cat1, caption: "Milo"),
+                .init(image: UIImage.cat2, caption: "Tlacoyo"),
+                .init(image: UIImage.cat3, caption: "Frostinky")
             ]
         }
     }
+}
+
+struct CaptionedImage {
+    let image: UIImage
+    let caption: String?
 }

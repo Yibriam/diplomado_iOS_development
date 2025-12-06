@@ -6,25 +6,41 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		1647858C2EDB7B5500CB4245 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52F153612E9AB2C400EC12DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52F153682E9AB2C400EC12DD;
+			remoteInfo = AppModulo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		161B2BD92E9AB49400A0B557 /* AppModulo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppModulo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		164785882EDB7B5500CB4245 /* UserDTOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserDTOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52F153692E9AB2C400EC12DD /* AppModulo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppModulo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		161B2BEB2E9AB49600A0B557 /* Exceptions for "AppModulo" folder in "AppModulo" target */ = {
+		52F1537B2E9AB2C700EC12DD /* Exceptions for "AppModulo" folder in "AppModulo" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 161B2BD82E9AB49400A0B557 /* AppModulo */;
+			target = 52F153682E9AB2C400EC12DD /* AppModulo */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		161B2BDB2E9AB49400A0B557 /* AppModulo */ = {
+		164785892EDB7B5500CB4245 /* UserDTOTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = UserDTOTests;
+			sourceTree = "<group>";
+		};
+		52F1536B2E9AB2C400EC12DD /* AppModulo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				161B2BEB2E9AB49600A0B557 /* Exceptions for "AppModulo" folder in "AppModulo" target */,
+				52F1537B2E9AB2C700EC12DD /* Exceptions for "AppModulo" folder in "AppModulo" target */,
 			);
 			path = AppModulo;
 			sourceTree = "<group>";
@@ -32,7 +48,14 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		161B2BD62E9AB49400A0B557 /* Frameworks */ = {
+		164785852EDB7B5500CB4245 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52F153662E9AB2C400EC12DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,18 +65,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		161B2BD02E9AB49400A0B557 = {
+		52F153602E9AB2C400EC12DD = {
 			isa = PBXGroup;
 			children = (
-				161B2BDB2E9AB49400A0B557 /* AppModulo */,
-				161B2BDA2E9AB49400A0B557 /* Products */,
+				52F1536B2E9AB2C400EC12DD /* AppModulo */,
+				164785892EDB7B5500CB4245 /* UserDTOTests */,
+				52F1536A2E9AB2C400EC12DD /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		161B2BDA2E9AB49400A0B557 /* Products */ = {
+		52F1536A2E9AB2C400EC12DD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				161B2BD92E9AB49400A0B557 /* AppModulo.app */,
+				52F153692E9AB2C400EC12DD /* AppModulo.app */,
+				164785882EDB7B5500CB4245 /* UserDTOTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,64 +86,99 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		161B2BD82E9AB49400A0B557 /* AppModulo */ = {
+		164785872EDB7B5500CB4245 /* UserDTOTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 161B2BEC2E9AB49600A0B557 /* Build configuration list for PBXNativeTarget "AppModulo" */;
+			buildConfigurationList = 1647858E2EDB7B5500CB4245 /* Build configuration list for PBXNativeTarget "UserDTOTests" */;
 			buildPhases = (
-				161B2BD52E9AB49400A0B557 /* Sources */,
-				161B2BD62E9AB49400A0B557 /* Frameworks */,
-				161B2BD72E9AB49400A0B557 /* Resources */,
+				164785842EDB7B5500CB4245 /* Sources */,
+				164785852EDB7B5500CB4245 /* Frameworks */,
+				164785862EDB7B5500CB4245 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1647858D2EDB7B5500CB4245 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				164785892EDB7B5500CB4245 /* UserDTOTests */,
+			);
+			name = UserDTOTests;
+			packageProductDependencies = (
+			);
+			productName = UserDTOTests;
+			productReference = 164785882EDB7B5500CB4245 /* UserDTOTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		52F153682E9AB2C400EC12DD /* AppModulo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52F1537C2E9AB2C700EC12DD /* Build configuration list for PBXNativeTarget "AppModulo" */;
+			buildPhases = (
+				52F153652E9AB2C400EC12DD /* Sources */,
+				52F153662E9AB2C400EC12DD /* Frameworks */,
+				52F153672E9AB2C400EC12DD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				161B2BDB2E9AB49400A0B557 /* AppModulo */,
+				52F1536B2E9AB2C400EC12DD /* AppModulo */,
 			);
 			name = AppModulo;
 			packageProductDependencies = (
 			);
 			productName = AppModulo;
-			productReference = 161B2BD92E9AB49400A0B557 /* AppModulo.app */;
+			productReference = 52F153692E9AB2C400EC12DD /* AppModulo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		161B2BD12E9AB49400A0B557 /* Project object */ = {
+		52F153612E9AB2C400EC12DD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					161B2BD82E9AB49400A0B557 = {
+					164785872EDB7B5500CB4245 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 52F153682E9AB2C400EC12DD;
+					};
+					52F153682E9AB2C400EC12DD = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
-			buildConfigurationList = 161B2BD42E9AB49400A0B557 /* Build configuration list for PBXProject "AppModulo" */;
+			buildConfigurationList = 52F153642E9AB2C400EC12DD /* Build configuration list for PBXProject "AppModulo" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 161B2BD02E9AB49400A0B557;
+			mainGroup = 52F153602E9AB2C400EC12DD;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 161B2BDA2E9AB49400A0B557 /* Products */;
+			productRefGroup = 52F1536A2E9AB2C400EC12DD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				161B2BD82E9AB49400A0B557 /* AppModulo */,
+				52F153682E9AB2C400EC12DD /* AppModulo */,
+				164785872EDB7B5500CB4245 /* UserDTOTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		161B2BD72E9AB49400A0B557 /* Resources */ = {
+		164785862EDB7B5500CB4245 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52F153672E9AB2C400EC12DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -128,7 +188,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		161B2BD52E9AB49400A0B557 /* Sources */ = {
+		164785842EDB7B5500CB4245 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52F153652E9AB2C400EC12DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -137,8 +204,50 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1647858D2EDB7B5500CB4245 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52F153682E9AB2C400EC12DD /* AppModulo */;
+			targetProxy = 1647858C2EDB7B5500CB4245 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		161B2BED2E9AB49600A0B557 /* Debug */ = {
+		1647858F2EDB7B5500CB4245 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yibriam.UserDTOTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppModulo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AppModulo";
+			};
+			name = Debug;
+		};
+		164785902EDB7B5500CB4245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yibriam.UserDTOTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppModulo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AppModulo";
+			};
+			name = Release;
+		};
+		52F1537D2E9AB2C700EC12DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -148,8 +257,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppModulo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.xib;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -157,7 +265,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = yibriam.AppModulo;
+				PRODUCT_BUNDLE_IDENTIFIER = "Diplomado-CSa.AppModulo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -165,7 +273,7 @@
 			};
 			name = Debug;
 		};
-		161B2BEE2E9AB49600A0B557 /* Release */ = {
+		52F1537E2E9AB2C700EC12DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -175,8 +283,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppModulo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.xib;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -184,7 +291,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = yibriam.AppModulo;
+				PRODUCT_BUNDLE_IDENTIFIER = "Diplomado-CSa.AppModulo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -192,7 +299,7 @@
 			};
 			name = Release;
 		};
-		161B2BEF2E9AB49600A0B557 /* Debug */ = {
+		52F1537F2E9AB2C700EC12DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -255,7 +362,7 @@
 			};
 			name = Debug;
 		};
-		161B2BF02E9AB49600A0B557 /* Release */ = {
+		52F153802E9AB2C700EC12DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -314,25 +421,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		161B2BD42E9AB49400A0B557 /* Build configuration list for PBXProject "AppModulo" */ = {
+		1647858E2EDB7B5500CB4245 /* Build configuration list for PBXNativeTarget "UserDTOTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				161B2BEF2E9AB49600A0B557 /* Debug */,
-				161B2BF02E9AB49600A0B557 /* Release */,
+				1647858F2EDB7B5500CB4245 /* Debug */,
+				164785902EDB7B5500CB4245 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		161B2BEC2E9AB49600A0B557 /* Build configuration list for PBXNativeTarget "AppModulo" */ = {
+		52F153642E9AB2C400EC12DD /* Build configuration list for PBXProject "AppModulo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				161B2BED2E9AB49600A0B557 /* Debug */,
-				161B2BEE2E9AB49600A0B557 /* Release */,
+				52F1537F2E9AB2C700EC12DD /* Debug */,
+				52F153802E9AB2C700EC12DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52F1537C2E9AB2C700EC12DD /* Build configuration list for PBXNativeTarget "AppModulo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52F1537D2E9AB2C700EC12DD /* Debug */,
+				52F1537E2E9AB2C700EC12DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 161B2BD12E9AB49400A0B557 /* Project object */;
+	rootObject = 52F153612E9AB2C400EC12DD /* Project object */;
 }

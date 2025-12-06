@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  AppModulo
+//  FakestagramShare
 //
-//  Created by Yibriam on 11/10/25.
+//  Created by alberto on 11/10/25.
 //
 
 import UIKit
