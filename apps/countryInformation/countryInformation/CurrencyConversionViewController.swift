@@ -17,7 +17,7 @@ final class CurrencyConversionViewController: UIViewController, UIPickerViewData
 
     private var currencies: [String] = [] // e.g., ["USD","CAD","MXN",...]
     private var baseCode: String = "USD"
-    private var targetCode: String = "EUR"
+    private var targetCode: String = "MXN"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +62,7 @@ final class CurrencyConversionViewController: UIViewController, UIPickerViewData
         targetPicker.dataSource = self
         targetPicker.delegate = self
 
-        arrowImageView.contentMode = .scaleAspectFill
+        arrowImageView.contentMode = .scaleAspectFit
         arrowImageView.tintColor = .systemBlue
 
         amountField.placeholder = "Cantidad"

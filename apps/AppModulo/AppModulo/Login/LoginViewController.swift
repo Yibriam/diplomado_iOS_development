@@ -25,9 +25,9 @@ final class LoginViewController: UIViewController {
     }
     
     func loginButtonTapped(_ action: UIAction) {
-        print("user: ", customView.userTextField.text)
-        print("password: ", customView.passwordTextField.text)
-        doLogin()
+        Task {
+            await doLogin()
+        }
     }
     
     private func doLogin() {
@@ -40,6 +40,15 @@ final class LoginViewController: UIViewController {
                     self?.setMainView()
                 }
             }
+        }
+    }
+  
+    private func doLogin() async {
+        do {
+            try await model.findUser(by: "Shanna@melissa.tv")
+            setMainView()
+        } catch {
+            presentErrorAlert(title: "Error", message: error.localizedDescription)
         }
     }
     

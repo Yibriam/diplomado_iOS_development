@@ -16,16 +16,26 @@ struct LoginModel {
     }
     
     func findUser(by email: String, handler: @escaping(Error?) -> Void) {
-        do {
-            guard let _ = try repository.getUsers(by: email)?.first else {
-                handler(LoginModelError.userNotFound)
-                return
+        repository.getUsers(by: email) { result in
+            switch result {
+            case.success(let users):
+                if users?.isEmpty ?? true {
+                    handler(NSError(domain: "LoginModel", code: -100))
+                } else {
+                    handler(nil)
+                }
+            case.failure(let failure):
+                handler(failure)
             }
-            handler(nil)
-        } catch {
-            handler(error)
-            
         }
+    }
+    
+    func findUser(by email: String) async throws {
+        let user = try await repository.getUsers(by: email)
+        if user?.isEmpty ?? true {
+            throw LoginModelError.userNotFound
+        }
+        
     }
     
     private enum LoginModelError: Error, LocalizedError {

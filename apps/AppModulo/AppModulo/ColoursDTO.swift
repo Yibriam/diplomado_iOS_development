@@ -6,6 +6,7 @@
 //
 
 struct ColourDTO: Decodable {
+    
     let albumId: Int
     let id: Int
     let title: String

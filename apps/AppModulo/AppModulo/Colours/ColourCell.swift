@@ -36,7 +36,29 @@ final class ColourCell: UITableViewCell {
         ])
     }
     
+    func setPhoto(_ colour: Colour) {
+        if let image = colour.image {
+            colourView.image = image
+        } else {
+            startAnimation()
+            colour.downloadColour { [weak self] image in
+                DispatchQueue.main.async {
+                    self?.stopAnimation()
+                    self?.colourView.image = image
+                }
+            }
+        }
+    }
     
+    func setPhoto(_ colour: Colour) async  {
+        if let image = colour.image {
+            colourView.image = image
+        } else {
+            startAnimation()
+            colourView.image = await colour.downloadColour()
+            stopAnimation()
+        }
+    }
     
     override func prepareForReuse() {
         super.prepareForReuse()
