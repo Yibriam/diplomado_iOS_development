@@ -39,8 +39,7 @@ class FollowerCell: UICollectionViewCell {
     
     func configure(with follower: Follower) {
         nameLabel.text = follower.login
-        
-        // Load image asynchronously
+
         if let url = URL(string: follower.avatar_url) {
             DispatchQueue.global().async {
                 if let data = try? Data(contentsOf: url) {
