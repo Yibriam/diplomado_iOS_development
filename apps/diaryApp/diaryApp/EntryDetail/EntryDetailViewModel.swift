@@ -1,10 +1,4 @@
-//
-//  EntryDetailViewModel.swift
-//  diaryApp
-//
-//  Created by Yibriam on 30/01/26.
-//
-
+import UIKit
 import MapKit
 
 class EntryDetailViewModel {
@@ -14,38 +8,22 @@ class EntryDetailViewModel {
         self.entry = entry
     }
     
-    func openDirections(transportType: MKDirectionsTransportType) {
-        guard let location = entry.location else { return }
-        
-        let destinationPlacemark = MKPlacemark(
-            coordinate: CLLocationCoordinate2D(latitude: location.latitude,
-                                               longitude: location.longitude),
-            addressDictionary: nil
-        )
-        let destinationItem = MKMapItem(placemark: destinationPlacemark)
-        destinationItem.name = entry.title
-        
-        let sourceItem = MKMapItem.forCurrentLocation()
+    func loadImageFromDisk(filename: String) -> UIImage? {
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(filename)
+        return UIImage(contentsOfFile: path.path)
+    }
+    
+    func calculateRoute(transportType: MKDirectionsTransportType, completion: @escaping (MKRoute?) -> Void) {
+        guard let loc = entry.location else { return }
         
         let request = MKDirections.Request()
-        request.source = sourceItem
-        request.destination = destinationItem
+        request.source = MKMapItem.forCurrentLocation()
+        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: loc.latitude, longitude: loc.longitude)))
         request.transportType = transportType
         
         let directions = MKDirections(request: request)
         directions.calculate { response, error in
-            if let route = response?.routes.first {
-                print("Route distance: \(route.distance) meters")
-            } else if let error = error {
-                print("Error calculating directions: \(error.localizedDescription)")
-            }
+            completion(response?.routes.first)
         }
-        
-        MKMapItem.openMaps(
-            with: [sourceItem, destinationItem],
-            launchOptions: [MKLaunchOptionsDirectionsModeKey:
-                            transportType == .walking ? MKLaunchOptionsDirectionsModeWalking
-                                                      : MKLaunchOptionsDirectionsModeDriving]
-        )
     }
 }

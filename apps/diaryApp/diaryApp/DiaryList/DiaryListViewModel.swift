@@ -42,7 +42,6 @@ class DiaryListViewModel {
             try service.saveEntries(entries)
             reloadEntries()
         } catch {
-            // Surface the error for debugging; replace with user-facing handling if needed
             print("Failed to save entries: \(error.localizedDescription)")
         }
     }

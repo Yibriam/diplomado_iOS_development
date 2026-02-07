@@ -7,32 +7,19 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		16D2A5072F2D7BB3000D1B16 /* diaryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = diaryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		165C027F2F36A36100AD9EE4 /* SplitBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		16D2A5192F2D7BB5000D1B16 /* Exceptions for "diaryApp" folder in "diaryApp" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 16D2A5062F2D7BB3000D1B16 /* diaryApp */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		16D2A5092F2D7BB3000D1B16 /* diaryApp */ = {
+		165C02812F36A36100AD9EE4 /* SplitBill */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				16D2A5192F2D7BB5000D1B16 /* Exceptions for "diaryApp" folder in "diaryApp" target */,
-			);
-			path = diaryApp;
+			path = SplitBill;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		16D2A5042F2D7BB3000D1B16 /* Frameworks */ = {
+		165C027C2F36A36100AD9EE4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		16D2A4FE2F2D7BB3000D1B16 = {
+		165C02762F36A36100AD9EE4 = {
 			isa = PBXGroup;
 			children = (
-				16D2A5092F2D7BB3000D1B16 /* diaryApp */,
-				16D2A5082F2D7BB3000D1B16 /* Products */,
+				165C02812F36A36100AD9EE4 /* SplitBill */,
+				165C02802F36A36100AD9EE4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		16D2A5082F2D7BB3000D1B16 /* Products */ = {
+		165C02802F36A36100AD9EE4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				16D2A5072F2D7BB3000D1B16 /* diaryApp.app */,
+				165C027F2F36A36100AD9EE4 /* SplitBill.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,66 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		16D2A5062F2D7BB3000D1B16 /* diaryApp */ = {
+		165C027E2F36A36100AD9EE4 /* SplitBill */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 16D2A51A2F2D7BB5000D1B16 /* Build configuration list for PBXNativeTarget "diaryApp" */;
+			buildConfigurationList = 165C028D2F36A36200AD9EE4 /* Build configuration list for PBXNativeTarget "SplitBill" */;
 			buildPhases = (
-				16D2A5032F2D7BB3000D1B16 /* Sources */,
-				16D2A5042F2D7BB3000D1B16 /* Frameworks */,
-				16D2A5052F2D7BB3000D1B16 /* Resources */,
+				165C027B2F36A36100AD9EE4 /* Sources */,
+				165C027C2F36A36100AD9EE4 /* Frameworks */,
+				165C027D2F36A36100AD9EE4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				16D2A5092F2D7BB3000D1B16 /* diaryApp */,
+				165C02812F36A36100AD9EE4 /* SplitBill */,
 			);
-			name = diaryApp;
+			name = SplitBill;
 			packageProductDependencies = (
 			);
-			productName = diaryApp;
-			productReference = 16D2A5072F2D7BB3000D1B16 /* diaryApp.app */;
+			productName = SplitBill;
+			productReference = 165C027F2F36A36100AD9EE4 /* SplitBill.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		16D2A4FF2F2D7BB3000D1B16 /* Project object */ = {
+		165C02772F36A36100AD9EE4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					16D2A5062F2D7BB3000D1B16 = {
+					165C027E2F36A36100AD9EE4 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
-			buildConfigurationList = 16D2A5022F2D7BB3000D1B16 /* Build configuration list for PBXProject "diaryApp" */;
+			buildConfigurationList = 165C027A2F36A36100AD9EE4 /* Build configuration list for PBXProject "SplitBill" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 16D2A4FE2F2D7BB3000D1B16;
+			mainGroup = 165C02762F36A36100AD9EE4;
 			minimizedProjectReferenceProxies = 1;
-			packageReferences = (
-			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 16D2A5082F2D7BB3000D1B16 /* Products */;
+			productRefGroup = 165C02802F36A36100AD9EE4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				16D2A5062F2D7BB3000D1B16 /* diaryApp */,
+				165C027E2F36A36100AD9EE4 /* SplitBill */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		16D2A5052F2D7BB3000D1B16 /* Resources */ = {
+		165C027D2F36A36100AD9EE4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -130,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		16D2A5032F2D7BB3000D1B16 /* Sources */ = {
+		165C027B2F36A36100AD9EE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -140,61 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		16D2A51B2F2D7BB5000D1B16 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = diaryApp/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = yibriam.diaryApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		16D2A51C2F2D7BB5000D1B16 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = diaryApp/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = yibriam.diaryApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		16D2A51D2F2D7BB5000D1B16 /* Debug */ = {
+		165C028B2F36A36200AD9EE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -257,7 +188,7 @@
 			};
 			name = Debug;
 		};
-		16D2A51E2F2D7BB5000D1B16 /* Release */ = {
+		165C028C2F36A36200AD9EE4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -313,28 +244,84 @@
 			};
 			name = Release;
 		};
+		165C028E2F36A36200AD9EE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SplitBill/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yibriam.SplitBill;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		165C028F2F36A36200AD9EE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SplitBill/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yibriam.SplitBill;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		16D2A5022F2D7BB3000D1B16 /* Build configuration list for PBXProject "diaryApp" */ = {
+		165C027A2F36A36100AD9EE4 /* Build configuration list for PBXProject "SplitBill" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				16D2A51D2F2D7BB5000D1B16 /* Debug */,
-				16D2A51E2F2D7BB5000D1B16 /* Release */,
+				165C028B2F36A36200AD9EE4 /* Debug */,
+				165C028C2F36A36200AD9EE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		16D2A51A2F2D7BB5000D1B16 /* Build configuration list for PBXNativeTarget "diaryApp" */ = {
+		165C028D2F36A36200AD9EE4 /* Build configuration list for PBXNativeTarget "SplitBill" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				16D2A51B2F2D7BB5000D1B16 /* Debug */,
-				16D2A51C2F2D7BB5000D1B16 /* Release */,
+				165C028E2F36A36200AD9EE4 /* Debug */,
+				165C028F2F36A36200AD9EE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 16D2A4FF2F2D7BB3000D1B16 /* Project object */;
+	rootObject = 165C02772F36A36100AD9EE4 /* Project object */;
 }

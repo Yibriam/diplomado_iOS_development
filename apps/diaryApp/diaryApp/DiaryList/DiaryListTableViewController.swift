@@ -15,34 +15,33 @@ class DiaryListTableViewController: UITableViewController {
         formatter.timeStyle = .short
         return formatter
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "My Diary"
-
+        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "DiaryCell")
-
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .add,
             target: self,
             action: #selector(addEntry)
         )
     }
-
-    // Handler for the add button
+    
     @objc private func addEntry() {
-        let editor = EntryEditorViewController(entry: nil) // open editor for new entry
+        let editor = EntryEditorViewController(entry: nil)
         navigationController?.pushViewController(editor, animated: true)
     }
-
-
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "DiaryCell")
         let entry = viewModel.entries[indexPath.row]
-
+        
         cell.textLabel?.text = entry.title
         cell.detailTextLabel?.text = dateFormatter.string(from: entry.date)
-
+        
         if entry.isDraft {
             cell.accessoryType = .detailDisclosureButton
             cell.textLabel?.textColor = .systemOrange
@@ -50,10 +49,10 @@ class DiaryListTableViewController: UITableViewController {
             cell.accessoryType = .none
             cell.textLabel?.textColor = .label
         }
-
+        
         return cell
     }
-
+    
     // MARK: - TableView DataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count = viewModel.entries.count
@@ -70,5 +69,21 @@ class DiaryListTableViewController: UITableViewController {
         
         return count
     }
+    
+    // MARK: - TableView Delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedEntry = viewModel.entries[indexPath.row]
+            
+        // PASS the existing entry so the editor knows we are UPDATING, not creating
+        let editorVC = EntryEditorViewController(entry: selectedEntry)
+        
+        navigationController?.pushViewController(editorVC, animated: true)
+    }
 
+    // Ensure the list refreshes when you come back
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.reloadEntries()
+        tableView.reloadData()
+    }
 }

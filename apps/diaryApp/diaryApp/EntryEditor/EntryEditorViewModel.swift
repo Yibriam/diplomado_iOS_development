@@ -3,38 +3,42 @@ import UIKit
 class EntryEditorViewModel {
     private let service = DiaryDataService()
     
-    /// Save new entry or update existing one
     func saveEntry(title: String, message: String, image: UIImage?, location: Location?, isDraft: Bool, existingId: UUID? = nil) {
-        var photoFilename: String? = nil
-        if let image = image {
-            photoFilename = saveImageToDocuments(image)
-        }
         
-        // Build entry using convenience initializer
-        var entry = DiaryEntry(
-            title: title,
-            message: message,
-            location: location,
-            photoFilename: photoFilename,
-            isDraft: isDraft
-        )
-        
-        // If updating, preserve id and date
         var entries = service.loadEntries()
+        
         if let id = existingId, let index = entries.firstIndex(where: { $0.id == id }) {
-            entry.id = id
-            entry.date = entries[index].date // keep original date if desired
-            entries[index] = entry
+            
+            if let newImage = image {
+                entries[index].photoFilename = saveImageToDocuments(newImage)
+            }
+            
+            entries[index].title = title
+            entries[index].message = message
+            entries[index].location = location
+            entries[index].isDraft = isDraft
+            
         } else {
-            // new entry: date and id already set by DiaryEntry defaults
-            entries.append(entry)
+            // 2. This is a brand new entry
+            var photoFilename: String? = nil
+            if let newImage = image {
+                photoFilename = saveImageToDocuments(newImage)
+            }
+            
+            let newEntry = DiaryEntry(
+                title: title,
+                message: message,
+                location: location,
+                photoFilename: photoFilename,
+                isDraft: isDraft
+            )
+            entries.append(newEntry)
         }
         
         do {
             try service.saveEntries(entries)
-            print("Saved entry: \(entry.title) (id: \(entry.id))")
         } catch {
-            print("Failed to save entry: \(error.localizedDescription)")
+            print("Failed to save entries: \(error.localizedDescription)")
         }
     }
     
