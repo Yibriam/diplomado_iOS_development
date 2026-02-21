@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="137" id="KGk-i7-Jjw" customClass="MoviesCatalogTableViewCell" customModule="MoviesApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="137"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="137"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNb-po-ayn">
+                        <rect key="frame" x="147" y="11" width="173" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAD-q4-ysL">
+                        <rect key="frame" x="142" y="40" width="168" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHh-7d-Bin">
+                        <rect key="frame" x="147" y="71" width="157" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tIR-RT-heQ">
+                        <rect key="frame" x="2" y="5.3333333333333428" width="137" height="124.33333333333331"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="137" id="ZrJ-Hy-yU3"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hHh-7d-Bin" firstAttribute="top" secondItem="EAD-q4-ysL" secondAttribute="bottom" constant="10" id="1N9-Wx-SH5"/>
+                    <constraint firstItem="EAD-q4-ysL" firstAttribute="top" secondItem="nNb-po-ayn" secondAttribute="bottom" constant="5" id="8Hr-eI-BFS"/>
+                    <constraint firstItem="hHh-7d-Bin" firstAttribute="leading" secondItem="tIR-RT-heQ" secondAttribute="trailing" constant="5" id="J62-aA-BWf"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="hHh-7d-Bin" secondAttribute="trailing" id="TF4-rr-8oT"/>
+                    <constraint firstItem="tIR-RT-heQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="XR7-rJ-r4F"/>
+                    <constraint firstAttribute="bottom" secondItem="tIR-RT-heQ" secondAttribute="bottom" constant="5" id="coz-oF-B3U"/>
+                    <constraint firstItem="nNb-po-ayn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="deY-Tb-SHz"/>
+                    <constraint firstAttribute="trailing" secondItem="nNb-po-ayn" secondAttribute="trailing" id="gHp-IE-waP"/>
+                    <constraint firstAttribute="trailing" secondItem="EAD-q4-ysL" secondAttribute="trailing" constant="10" id="hqQ-7B-Hvd"/>
+                    <constraint firstItem="tIR-RT-heQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="kDT-0v-H1x"/>
+                    <constraint firstItem="EAD-q4-ysL" firstAttribute="leading" secondItem="tIR-RT-heQ" secondAttribute="trailing" id="ngq-RK-aGG"/>
+                    <constraint firstItem="nNb-po-ayn" firstAttribute="leading" secondItem="tIR-RT-heQ" secondAttribute="trailing" constant="5" id="xE8-HB-2XU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="movieImage" destination="tIR-RT-heQ" id="Hq5-QM-fyd"/>
+                <outlet property="overViewLabel" destination="hHh-7d-Bin" id="ajp-YN-Zqd"/>
+                <outlet property="titileLabel" destination="nNb-po-ayn" id="3Yd-Y5-DDa"/>
+                <outlet property="voteLabel" destination="EAD-q4-ysL" id="MNG-jW-a4h"/>
+            </connections>
+            <point key="canvasLocation" x="109.9236641221374" y="42.605633802816904"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="person" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
